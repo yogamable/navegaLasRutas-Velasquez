@@ -1,0 +1,28 @@
+body{
+    padding: 2rem;
+}
+
+.imgLogo{
+    height: 1.5rem;
+}
+
+.cartLink{
+    color: black;
+}
+
+.mainContainer{
+    padding: 2rem;
+}
+
+.tituloCategoria{
+    display: flex;
+    justify-content: center;
+    padding: 4rem 0;
+}
+
+.mainCards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}

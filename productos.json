@@ -1,0 +1,129 @@
+[
+  {
+    "id": 1,
+    "categoria": "agenda",
+    "nombre": "Agenda 1",
+    "precio": 2000,
+    "img": "<i className='bi bi-journal'></i>"
+  },
+  {
+    "id": 2,
+    "categoria": "agenda",
+    "nombre": "Agenda 2",
+    "precio": 3000,
+    "img": "<i className='bi bi-journal'></i>"
+  },
+  {
+    "id": 3,
+    "categoria": "agenda",
+    "nombre": "Agenda 3",
+    "precio": 4000,
+    "img": "<i class='bi bi-journal'></i>"
+  },
+  {
+    "id": 4,
+    "categoria": "agenda",
+    "nombre": "Agenda 4",
+    "precio": 5000,
+    "img": "<i class='bi bi-journal'></i>"
+  },
+  {
+    "id": 5,
+    "categoria": "agenda",
+    "nombre": "Agenda 5",
+    "precio": 6000,
+    "img": "<i class='bi bi-journal'></i>"
+  },
+  {
+    "id": 6,
+    "categoria": "agenda",
+    "nombre": "Agenda 6",
+    "precio": 7000,
+    "img": "<i class='bi bi-journal'></i>"
+  },
+  {
+    "id": 7,
+    "categoria": "lapiz",
+    "nombre": "Lápiz 1",
+    "precio": 2000,
+    "img": "<i class='bi bi-pencil'></i>"
+  },
+  {
+    "id": 8,
+    "categoria": "lapiz",
+    "nombre": "Lápiz 2",
+    "precio": 3000,
+    "img": "<i class='bi bi-pencil'></i>"
+  },
+  {
+    "id": 9,
+    "categoria": "lapiz",
+    "nombre": "Lápiz 3",
+    "precio": 4000,
+    "img": "<i class='bi bi-pencil'></i>"
+  },
+  {
+    "id": 10,
+    "categoria": "lapiz",
+    "nombre": "Lápiz 4",
+    "precio": 5000,
+    "img": "<i class='bi bi-pencil'></i>"
+  },
+  {
+    "id": 11,
+    "categoria": "lapiz",
+    "nombre": "Lápiz 5",
+    "precio": 6000,
+    "img": "<i class='bi bi-pencil'></i>"
+  },
+  {
+    "id": 12,
+    "categoria": "lapiz",
+    "nombre": "Lápiz 6",
+    "precio": 7000,
+    "img": "<i class='bi bi-pencil'></i>"
+  },
+  {
+    "id": 13,
+    "categoria": "sticker",
+    "nombre": "Sticker 1",
+    "precio": 2000,
+    "img": "<i class='bi bi-tux'></i>"
+  },
+  {
+    "id": 14,
+    "categoria": "sticker",
+    "nombre": "Sticker 2",
+    "precio": 3000,
+    "img": "<i class='bi bi-tux'></i>"
+  },
+  {
+    "id": 15,
+    "categoria": "sticker",
+    "nombre": "Sticker 3",
+    "precio": 4000,
+    "img": "<i class='bi bi-tux'></i>"
+  },
+  {
+    "id": 16,
+    "categoria": "sticker",
+    "nombre": "Sticker 4",
+    "precio": 5000,
+    "img": "<i class='bi bi-tux'></i>"
+  },
+  {
+    "id": 17,
+    "categoria": "sticker",
+    "nombre": "Sticker 5",
+    "precio": 6000,
+    "img": "<i class='bi bi-tux'></i>"
+  },
+  {
+    "id": 18,
+    "categoria": "sticker",
+    "nombre": "Sticker 6",
+    "precio": 7000,
+    "img": "<i class='bi bi-tux'></i>"
+  }
+  
+]
