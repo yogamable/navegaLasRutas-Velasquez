@@ -1,15 +1,14 @@
 import './App.css';
 import Header from "./components/Header";
-import Content from './components/Content';
-import { BrowserRouter, Route } from 'react-router';
+import { BrowserRouter } from 'react-router';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
 
   return (
     <BrowserRouter>
       <Header />
-
-      <Content />
+      <ItemListContainer />
 
     </BrowserRouter>
     
