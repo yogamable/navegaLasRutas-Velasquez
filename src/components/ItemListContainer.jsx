@@ -1,49 +1,95 @@
-import { useEffect, useState, Link } from "react";
-import data from "../../productos.json";
+import { useEffect, useState} from "react";
+import { useParams } from "react-router";
+import ItemList from "./ItemList";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from "../firebase/firebase-config";
+
 
 const ItemListContainer = () => {
 
     const [productos, setProductos] = useState([]);
+    const { categoriaId } = useParams();
 
-    const getProductos = () => {
-        return new Promise((resolve) => {
-            resolve(data)
-        })
+    const titulos = {
+        agendas: 'Agendas',
+        lapices: 'Lapices',
+        stickers: 'Stickers'
     }
 
     useEffect(() => {
-        getProductos()
-            .then((res) => {
-                setProductos(res);
-            })
 
-    }, [])
+    const productosRef = collection(db, "productos");
 
+    const traerProductos = async () => {
+        try {
+            let consulta;
+
+            if (categoriaId) {
+                consulta = query(productosRef, where("categoria", "==", categoriaId));
+            } else {
+                consulta = productosRef;
+            }
+
+            const res = await getDocs(consulta);
+
+            const productosDB = res.docs.map(doc => ({
+                id: doc.id,
+                ...doc.data()
+            }));
+
+            setProductos(productosDB);
+
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
+    traerProductos();
+
+}, [categoriaId]);
 
     return(
         <div>
-            {
-            productos.length > 0 && 
-            productos.map((producto)=>{
-                return(
-                    <div className="card" style={{width: '18rem'}}>
-                        <img src={producto.img} className="card-img-top" alt={producto.nombre}></img>
-                        <div className="card-body">
-                            <h5 className="card-title">{producto.nombre}</h5>
-                        </div>
-                        <ul className="list-group list-group-flush">
-                            <li className="list-group-item">Precio</li>
-                        </ul>
-                        <div className="card-body">
-                            <Link to="/" className="card-link">Ver producto</Link>
-                        </div>
-                    </div>
-
-                )
-            })
-            }
+            <div className="tituloCategoria">
+                <h1>{categoriaId ? titulos[categoriaId] : "Todos los Productos"}</h1>
+            </div>
+            <ItemList productos={productos} />
         </div>
     )
 }
 
 export default ItemListContainer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import ItemListContainer from "./ItemList"
+
+// function Content () {
+
+
+//     return(
+//         <main className="mainContainer">
+//             <h1 className="text-center">Productos</h1>
+//             <div className="cards-container">
+//                 <ItemListContainer />
+//             </div>
+            
+//         </main>
+//     )
+// }
+
+// export default Content

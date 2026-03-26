@@ -1,12 +1,12 @@
 import { Link } from "react-router";
-import Cart from "./Cart"
+import Cart from "./Cart";
 
-function Navbar(){
+function NavBar(){
     return (
         <header>
             <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
-                    <Link className="navbar-brand active" aria-current="page" to="/"><img className="imgLogo" src="../img/logo.png"></img></Link>
+                    <Link className="navbar-brand active" aria-current="page" to="/"><img className="imgLogo" src="/src/img/logo.png"></img></Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                     </button>
@@ -18,7 +18,7 @@ function Navbar(){
                         </div>
                     </div>
                     <div className="cart d-flex align-content-center">
-                        <Cart />
+                        <Cart  />
                     </div>
                 </div>
             </nav>
@@ -26,4 +26,4 @@ function Navbar(){
     )
 }
 
-export default Navbar
+export default NavBar

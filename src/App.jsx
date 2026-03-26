@@ -1,14 +1,20 @@
 import './App.css';
-import Header from "./components/Header";
-import { BrowserRouter } from 'react-router';
+import { BrowserRouter, Routes, Route } from 'react-router';
+import Navbar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
+import CartItem from './components/CartItem';
 
 function App() {
 
   return (
     <BrowserRouter>
-      <Header />
-      <ItemListContainer />
+      <Navbar />
+      <Routes>  
+        <Route path="/" element={<ItemListContainer />} />
+        <Route path="/categoria/:categoriaId" element={<ItemListContainer />} />
+        <Route path="/carro" element={<CartItem />} />
+      </Routes>
+
 
     </BrowserRouter>
     
